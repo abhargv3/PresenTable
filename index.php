@@ -11,8 +11,8 @@
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
   <body ng-app="loginApp">
-    <div class="container-fluid">
-    {{112+2}}
+    <div class="container-fluid" ng-controller="loginCtrl">
+    {{12+2}}
       <border1>
           <h1>
            <strong>Welcome to PresenTable </strong>

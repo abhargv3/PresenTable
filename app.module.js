@@ -1,4 +1,4 @@
-var app = angular.module("loginApp",[]);
+var app=angular.module("loginApp",["ngRoute"]);
 
 window.fbAsyncInit = function() {
     FB.init({
@@ -16,9 +16,9 @@ window.fbAsyncInit = function() {
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
-app.controller("homeCtrl", function($scope){
-    
-    /*$scope.FBLogin=function(){
+app.controller("loginCtrl",function($scope){
+    //Facebook Login
+    $scope.FBLogin=function(){
         FB.login(function(response) {
             if (response.authResponse) {
                 console.log('Welcome!  Fetching your information.... ');
@@ -28,21 +28,11 @@ app.controller("homeCtrl", function($scope){
                     console.log(accessCode);
                 });
             } else {
-             alert('User cancelled login or did not fully authorize.');
+             console.log('User cancelled login or did not fully authorize.');
             }
         });
 
-    };*/
-
-	/*$scope.FBImage=function(){
-    FB.api(
-  			'/{user-id}/photos',
-  			'GET',
-  			{},
-  			function(response) {
-      // Insert your code here
-      			console.log(response);
-  			}
-		);
-  };*/
+    };
+          
 });
+
