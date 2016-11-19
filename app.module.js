@@ -18,6 +18,7 @@ window.fbAsyncInit = function() {
 
 app.controller("loginCtrl",function($scope){
     //Facebook Login
+    user-id = null;
     $scope.FBLogin=function(){
         FB.login(function(response) {
             if (response.authResponse) {
@@ -26,6 +27,7 @@ app.controller("loginCtrl",function($scope){
                     console.log('Good to see you, ' + response.name + '.');
                     var accessCode = FB.getAuthResponse().accessToken;
                     console.log(response);
+                    user-id = response.id;
                 });
             } else {
              console.log('User cancelled login or did not fully authorize.');
@@ -33,6 +35,17 @@ app.controller("loginCtrl",function($scope){
         });
 
     };
+
+    $scope.findPhoto = function(){
+        FB.api(
+            "/me/photos/",
+            "GET",
+            function (response) {
+              console.log(response);
+            }
+        );
+
+    }
           
 });
 
