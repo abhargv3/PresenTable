@@ -37,8 +37,10 @@ app.controller("loginCtrl",function($scope){
     };
 
     $scope.findPhoto = function(){
+        if(user-id==null)
+          alert("Please Login");
         FB.api(
-            "/me/photos/",
+            "/{user-id}/photos/",
             "GET",
             function (response) {
               console.log(response);
