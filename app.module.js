@@ -26,7 +26,7 @@ app.controller("homeCtrl", function($scope){
   			function(response) {
       // Insert your code here
       			console.log(response);
-  	}
-	);
-        
-};
+  			}
+		);
+    };
+});
