@@ -20,14 +20,16 @@ app.controller("loginCtrl",function($scope){
     //Facebook Login
     $scope.imageURLs = [];
     var userId;
+    var accessCode;
     $scope.FBLogin=function(){
         FB.login(function(response) {
             if (response.authResponse) {
                 console.log('Welcome!  Fetching your information.... ');
                 FB.api('/me', function(response) {
                     console.log('Good to see you, ' + response.name + '.');
-                    var accessCode = FB.getAuthResponse().accessToken;
+                    accessCode = FB.getAuthResponse().accessToken;
                     console.log(response);
+                    console.log(accessCode);
                     userId = response.id;
                 });
             } else {
