@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!-- Classes -->
-
+<html>
 <head>
     <title> PresenTable</title>
       <!-- Latest compiled and minified AngularJavaScript -->
