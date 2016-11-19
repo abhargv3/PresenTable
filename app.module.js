@@ -43,7 +43,7 @@ app.controller("loginCtrl",function($scope){
             "GET",
             {"fields":"picture"},
             function (response) {
-              console.log(response.picture);
+              console.log(response.data); //This is an array
             }
         );
 
