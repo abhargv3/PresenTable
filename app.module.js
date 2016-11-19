@@ -18,7 +18,7 @@ window.fbAsyncInit = function() {
 
 app.controller("homeCtrl", function($scope){
     
-    $scope.FBLogin=function(){
+    /*$scope.FBLogin=function(){
         FB.login(function(response) {
             if (response.authResponse) {
                 console.log('Welcome!  Fetching your information.... ');
@@ -32,7 +32,7 @@ app.controller("homeCtrl", function($scope){
             }
         });
 
-    };
+    };*/
 
 	/*$scope.FBImage=function(){
     FB.api(
