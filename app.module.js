@@ -18,7 +18,7 @@ window.fbAsyncInit = function() {
 
 app.controller("loginCtrl",function($scope){
     //Facebook Login
-    user-id = 0;
+    var user-id =0;
     $scope.FBLogin=function(){
         FB.login(function(response) {
             if (response.authResponse) {
