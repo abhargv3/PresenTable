@@ -5,7 +5,7 @@
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<head>
+<!-- <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	<h3></h3>
+	<h3></h3> -->
 
 
 
@@ -24,9 +24,6 @@
 
 <border1><h1><strong>Welcome to PresenTable </strong></h1></border1>
 
-
-
-
 <!--==============================================-->
 
 <div class="row">
@@ -34,18 +31,6 @@
   <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
 </div>
 
-<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-<div class="row">
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-</div>
-
-<!-- Columns are always 50% wide, on mobile and desktop -->
-<div class="row">
-  <div class="col-xs-6">.col-xs-6</div>
-  <div class="col-xs-6">.col-xs-6</div>
-</div>
 
 <!--===========================================-->
 
