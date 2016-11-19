@@ -18,7 +18,7 @@ window.fbAsyncInit = function() {
 
 app.controller("loginCtrl",function($scope){
     //Facebook Login
-    user-id = null;
+    user-id = 0;
     $scope.FBLogin=function(){
         FB.login(function(response) {
             if (response.authResponse) {
@@ -37,7 +37,7 @@ app.controller("loginCtrl",function($scope){
     };
 
     $scope.findPhoto = function(){
-        if(user-id==null)
+        if(user-id==0)
           alert("Please Login");
         FB.api(
             "/{user-id}/photos/",
