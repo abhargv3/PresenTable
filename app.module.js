@@ -40,7 +40,7 @@ app.controller("loginCtrl",function($scope){
         FB.api(
             "/me/photos/",
             "GET",
-            {},
+            {"fields":"picture"},
             function (response) {
               console.log(response);
             }
