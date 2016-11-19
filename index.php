@@ -18,7 +18,7 @@
 
 <!--==============================================-->
 <!--===========================================-->
-     <p class = "border1">PresenTable fixes up your Facebook page to make you more presentable to recruiters </p> 
+     <p class="border1">PresenTable fixes up your Facebook page to make you more presentable to recruiters </p> 
 
    <button type="button" class="btn btn-info btn-lg">Login</button>
 	
