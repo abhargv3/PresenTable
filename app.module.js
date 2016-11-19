@@ -17,6 +17,7 @@ window.fbAsyncInit = function() {
    }(document, 'script', 'facebook-jssdk'));
 
 app.controller("homeCtrl", function($scope){
+    
     $scope.FBLogin=function(){
         FB.login(function(response) {
             if (response.authResponse) {
