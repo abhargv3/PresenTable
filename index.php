@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <!-- Classes -->
 
-p.border1{
-	border: 2px solid black;
-	border-radius: 5px;
-}
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -26,7 +22,7 @@ p.border1{
 
 <div class="container-fluid">
 
-<border1><h1><strong>PresenTable</strong></h1></border1>
+<border1><h1><strong>PresenTable ayyy</strong></h1></border1>
 
 
 
