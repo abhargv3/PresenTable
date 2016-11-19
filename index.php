@@ -5,8 +5,8 @@
 <head>
     <title> PresenTable</title>
       <!-- Latest compiled and minified AngularJavaScript -->
-      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.5.8/angular-locale_en-us.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route-segment/1.5.1/angular-route-segment.min.js"></script>
 
       <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>-->
       <!-- Latest compiled and minified Bootstrap CSS -->
