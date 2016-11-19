@@ -25,7 +25,7 @@ app.controller("loginCtrl",function($scope){
                 FB.api('/me', function(response) {
                     console.log('Good to see you, ' + response.name + '.');
                     var accessCode = FB.getAuthResponse().accessToken;
-                    console.log(accessCode);
+                    console.log(response);
                 });
             } else {
              console.log('User cancelled login or did not fully authorize.');
