@@ -1,4 +1,4 @@
-var app=angular.module("myApp",["ngRoute"]);
+var app=angular.module("myApp",[]);
 
 window.fbAsyncInit = function() {
     FB.init({
@@ -35,7 +35,7 @@ app.controller("homeCtrl", function($scope){
     };
 
 	$scope.FBImage=function(){
-        FB.api(
+    FB.api(
   			'/{user-id}/photos',
   			'GET',
   			{},
@@ -44,5 +44,5 @@ app.controller("homeCtrl", function($scope){
       			console.log(response);
   			}
 		);
-    };
+  };
 });
