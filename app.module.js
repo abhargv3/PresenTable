@@ -43,7 +43,8 @@ app.controller("loginCtrl",function($scope){
             "GET",
             {"fields":"picture"},
             function (response) {
-              $scope.imageURLs = response.picture.data.url
+              $scope.imageURLs = response.picture;
+              console.log(imageURLs);
             }
         );
 

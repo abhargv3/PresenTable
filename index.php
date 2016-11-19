@@ -33,7 +33,7 @@
 
   </div>
   <div ng-repeat="imageURL in imageURLs">
-      <img src="{{imageURL}}">
+      <!--<img src="{{imageURL.data.url}}">-->
   </div>
 
   </body>
