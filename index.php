@@ -20,7 +20,7 @@
 <!--===========================================-->
      <p class = "border1">Make your online presence PresenTable! </p> 
 
-<button type="button" class="btn btn-primary">Login</button>
+<button type="button" class="btn btn-info btn-lg">Login</button>
 	
 
 
