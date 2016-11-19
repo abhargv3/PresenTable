@@ -11,7 +11,7 @@
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       </link>
 </head>
-  <body ng-app>
+  <body ng-app="loginApp">
     <div class="container-fluid">
     {{11+2}}
       <border1>

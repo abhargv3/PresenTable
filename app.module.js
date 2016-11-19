@@ -1,4 +1,4 @@
-var app=angular.module("loginApp",[]);
+var app = angular.module("loginApp",[]);
 
 window.fbAsyncInit = function() {
     FB.init({
