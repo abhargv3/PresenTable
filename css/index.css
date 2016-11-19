@@ -2,3 +2,9 @@ p.border1{
   border: 2px solid black;
   border-radius: 5px;
 }
+
+
+
+kbd {
+	 background-color:#f7f7f7;
+}
