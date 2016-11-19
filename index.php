@@ -22,12 +22,12 @@
 
 <div class="container-fluid">
 
-<border1><h1><strong>PresenTable ayyy</strong></h1></border1>
+<border1><h1><strong>Welcome to PresenTable </strong></h1></border1>
 
 
 
 
-<!------------------------------------------------------>
+<!--==============================================-->
 
 <div class="row">
   <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
@@ -47,7 +47,7 @@
   <div class="col-xs-6">.col-xs-6</div>
 </div>
 
-<!------------------------------------------------------>
+<!--===========================================-->
 
 
 
