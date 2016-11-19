@@ -18,10 +18,11 @@
 
 <!--==============================================-->
 <!--===========================================-->
-     <p class = "border1">Make your online presence PresenTable! </p> 
+     <p class = "border1">PresenTable fixes up your Facebook page to make you more presentable to recruiters </p> 
 
-<button type="button" class="btn btn-info btn-lg">Login</button>
+   <button type="button" class="btn btn-info btn-lg">Login</button>
 	
+   <a href="#" class="btn btn-info btn-lg active" role="button" aria-pressed="true">Be PresenTable </a>
 
 
 
