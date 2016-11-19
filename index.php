@@ -18,8 +18,9 @@
 
 <!--==============================================-->
 <!--===========================================-->
-     <p class = "border1">This is some text.</p> 
+     <p class = "border1">Make your online presence PresenTable! </p> 
 
+<button type="button" class="btn btn-primary">Login</button>
 	
 
 
