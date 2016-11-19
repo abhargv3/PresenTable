@@ -16,7 +16,7 @@
 
   <body ng-app="myApp">
     <div class="container-fluid" ng-controller="homeCtrl">
-    {{2+3}}
+    {{2+4}}
       <border1>
           <h1>
            <strong>Welcome to PresenTable </strong>
