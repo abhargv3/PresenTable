@@ -32,7 +32,7 @@
       <a class="btn btn-info btn-lg active" role="button" aria-pressed="true" ng-click="findPhoto()">Be PresenTable </a>
 
   </div>
-  <div ng-repeat="imageURL in imageURLs">
+  <div>
       <!--<img src="{{imageURL.data.url}}">-->
   </div>
 
