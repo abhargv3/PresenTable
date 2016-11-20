@@ -8,7 +8,7 @@ app.config(function($routeProvider){
                 controller:"loginCtrl"
             }
         )
-    .when("/my-bukits",
+    .when("/results",
             {
                 templateUrl:"partials/results.htm",
                 controller:"loginCtrl"
