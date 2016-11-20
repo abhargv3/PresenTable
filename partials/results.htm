@@ -118,13 +118,13 @@ h4{
 	
 
 
-<div class="container-fluid" ng-repeat="imgArrs in taggedPics">
+<div class="container-fluid">
   
   	<div class="jumbotron_red jumbotron-fluid">
 			<div class="container-fluid "> 	
 
 				  	<h4>
-				  	<p class="text-center"><kbd>25</kbd> of them contain <button type="button" class="btn btn-outline-danger">{{tag[$index].name}}</button></p>
+				  	<p class="text-center"><kbd>25</kbd> of them contain <button type="button" class="btn btn-outline-danger">Lemeow</button></p>
 				  	</h4>
 			</div>
 	</div>
@@ -133,7 +133,7 @@ h4{
   <table class="table-responsive">
   
     <tbody>
-      	<tr ng-repeat="pics in imgArrs">
+      	<tr ng-repeat="pics in taggedPics">
         	<td>
         		<div class="padding_plz">
         			<img src="{{pics}}" class="img-responsive" alt="Responsive image">
