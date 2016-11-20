@@ -28,9 +28,6 @@
             <p class = "border1">PresenTable fixes up your Facebook page to make you more presentable to recruiters </p> 
             <button type="button" class="btn btn-info btn-lg" ng-click="FBLogin()">Login</button>
             <a class="btn btn-info btn-lg active" role="button" aria-pressed="true" ng-click="findPhoto()">Be PresenTable </a>
-            <div ng-repeat="image in images">
-                <img src="{{image.picture}}">
-            </div>
         </div>
     </body>
 </html>
