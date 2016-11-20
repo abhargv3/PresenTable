@@ -30,15 +30,12 @@ app.controller("loginCtrl",function($scope,$location){
             if (response.authResponse) {
                 console.log('Welcome!  Fetching your information.... ');
                 FB.api('/me', function(response) {
-                    console.log('Good to see you, ' + response.name + '.');
-
-                                
+                    console.log('Good to see you, ' + response.name + '.');              
                     //accessCode = FB.getAuthResponse().accessToken;
                     user_photos = FB.getAuthResponse().user_photos;
                     console.log(accessToken);
                     userId = response.id;
                 });
-
             } else {
              console.log('User cancelled login or did not fully authorize.');
             }
@@ -47,37 +44,24 @@ app.controller("loginCtrl",function($scope,$location){
                   'GET',
                   {"fields":"picture"},
                   function(response) {
-                      console.log(response);
-                  }
-                );
-        },{scope:'user_photos', return_scopes:true});
-
-    };
-
-    $scope.findPhoto = function(){
-        FB.api(
-            '/me/photos',
-            'GET',
-            {"fields":"picture"},
-            function (response) {
-                console.log(response.data); //This is an array
-                $scope.images = response.data;
-                console.log($scope.images[0].picture);
-                for(var i=0; i<$scope.images.length; i++){
-                    console.log($scope.images[i].picture);
-                    $scope.imageObj.push({url:$scope.images[i].picture, id:userId+i});
-                    $scope.ids.push(userId+i);
-                };
-                console.log($scope.imageObj);
-                clarifaiApp.inputs.create($scope.imageObj)
-                .then(
-                    $scope.searchByTag(),
-                    function(err){
-                        console.error(err);
+                    console.log(response.data); //This is an array
+                    $scope.images = response.data;
+                    console.log($scope.images[0].picture);
+                    for(var i=0; i<$scope.images.length; i++){
+                        console.log($scope.images[i].picture);
+                        $scope.imageObj.push({url:$scope.images[i].picture, id:userId+i});
+                        $scope.ids.push(userId+i);
+                    };
+                    console.log($scope.imageObj);
+                    clarifaiApp.inputs.create($scope.imageObj)
+                    .then(
+                        $scope.searchByTag(),
+                        function(err){
+                            console.error(err);
+                        }
                     }
                 );
-            }
-        );
+        },{scope:'user_photos', return_scopes:true});
         $location.path('/results');
     };
     $scope.searchByTag = function(){
