@@ -1,11 +1,129 @@
- 
+ <style>
 
- <div class="container-fluid" ng-init="deleteAll()">
-    <border1>
-            <h1>
-                <strong>Welcome to PresenTable V{{0+2}} </strong>
+.text-center{
+	text-align:center;
+
+}
+
+body,html {
+  height: 100%;
+}
+
+body {
+  padding-top: 50px;
+}
+
+.padding_top{
+	padding-top:100px;
+
+}
+
+.padding_bottom{
+	padding-bottom:100px;
+
+}
+
+
+.wide {
+  width:100%;
+  height:50%;
+  font-size: 50px;
+ background-image:url('https://c2.staticflickr.com/8/7025/6524325485_caf22e5c35_b.jpg');
+  background-size: 100% 100%;
+
+}
+
+.wide img {
+  width:100%;
+}
+
+.logo {
+
+position:relative;
+
+  color:#fff;
+  font-weight:800;
+  font-size:14pt;
+  padding:25px;
+  text-align:center;
+}
+
+.line {
+
+position:relative;
+
+  padding-top:20px;
+  white-space:no-wrap;
+  overflow:hidden;
+  text-align:center;
+  background-color:#ff8000;
+}
+
+.border1{
+position:relative;
+
+	font-size:20px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+.huge{
+	font-size:90px;
+
+}
+
+.medium{
+	font-size:25px;
+}
+.container_height{
+	
+	height:230px;
+}
+
+.white_font{
+	color:#fff;
+}
+
+
+ </style>
+
+<head>
+  <title>
+		PresenTable  		
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+	<div class="wide">
+	  	
+	    <div class="logo">
+	    		<h1 class="text-center padding_top huge">
+              <strong>Welcome to PresenTable</strong>
             </h1>
-            </border1>
-            <p class = "border1">PresenTable fixes up your Facebook page to make you more presentable to recruiters </p> 
-            <button type="button" class="btn btn-info btn-lg" ng-click="FBLogin()">Login with Facebook</button>
+
+
+	    </div>
+	    
+	
+	</div>
+
+
+ <div class="container-fluid line container_height">
+   
+            <p class = "text-center white_font medium ">
+            		<b>Be The Best You.</b>
+            	</p>
+            
+              <p class = "border1 text-center white_font medium ">		
+            		
+            			 Your online presence is everything in the modern world. PresenTable fixes up your Facebook page to make you more presentable to recruiters 
+            		
+            </p> 
+            <button type="button" class="btn btn-info btn-lg " ng-click="FBLogin()">Login with Facebook</button>
 </div>
