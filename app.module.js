@@ -97,8 +97,8 @@ app.controller("loginCtrl",function($scope,$location){
                         $scope.someArray = taggedPics;
                         $location.path('/table');
                     }
-                }
-            },
+                },
+            
             function(response){
                 console.log(response);
             }
