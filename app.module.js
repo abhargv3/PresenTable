@@ -1,9 +1,3 @@
-var clarifaiApp = new Clarifai.App(
-        '9VKC0UBbx74gI39IkMyKxexyO_BUemWMMJFI0ukP',
-        'KnGRksrndn6UFXGs-a5t0LFNqz-ri25mDEhbWBf5'
-);
-
-
 window.fbAsyncInit = function() {
     FB.init({
       appId      : '152005755273941',
