@@ -41,14 +41,14 @@ app.controller("loginCtrl",function($scope,$location){
             FB.api(
                   '/me/photos',
                   'GET',
-                  {"fields":"picture"},
+                  {"fields":"images"},
                   function(response) {
                     console.log(response.data); //This is an array
                     $scope.images = response.data;
                     console.log($scope.images[0].picture);
                     for(var i=0; i<$scope.images.length; i++){
-                        console.log($scope.images[i].picture);
-                        $scope.imageObj.push({url:$scope.images[i].picture, id:userId+i});
+                        console.log($scope.images[i].source);
+                        $scope.imageObj.push({url:$scope.images[i].source, id:userId+i});
                         $scope.ids.push(userId+i);
                     };
                     console.log($scope.imageObj);
