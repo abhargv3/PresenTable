@@ -1,5 +1,3 @@
-var app=angular.module("myApp",["ngRoute"]);
-
 window.fbAsyncInit = function() {
     FB.init({
       appId      : '152005755273941',
