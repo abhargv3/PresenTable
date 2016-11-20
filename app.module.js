@@ -78,7 +78,7 @@ app.controller("loginCtrl",function($scope,$location){
                 });
         },{scope:'user_photos', return_scopes:true});
         $location.path('/results');
-    };
+    }
     $scope.searchByTag = function(){
         clarifaiApp.inputs.search($scope.tag[0]).then(
             function(response){
@@ -100,11 +100,11 @@ app.controller("loginCtrl",function($scope,$location){
             }
             );
         console.log("FUUUUUUK PLZ WORK");
-        console.log($scope.taggedPics.length);
-    };
+        //console.log($scope.taggedPics.length);
+    }
     $scope.gotoSearch = function(){
         $location.path('/results');
         console.log($scope.taggedPics[0]);
-    };    
+    }    
 });
 
