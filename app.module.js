@@ -57,7 +57,7 @@ app.controller("loginCtrl",function($scope,$location){
         };
         clarifaiApp.inputs.create(imageObj)
         .then(
-            searchByTag(),
+            $scope.searchByTag(),
             function(err){
                 console.error(err);
             }
