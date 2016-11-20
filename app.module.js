@@ -98,7 +98,6 @@ app.controller("loginCtrl",function($scope,$location){
                 console.log(response);
             }
             );
-        }
         console.log("FUUUUUUK PLZ WORK");
         console.log($scope.taggedPics.length);
         if($scope.taggedPics.length>0)
