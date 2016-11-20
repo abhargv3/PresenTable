@@ -1,4 +1,4 @@
-var app=angular.module("loginApp",["ngRoute"]);
+var app=angular.module("myApp",["ngRoute"]);
 
 window.fbAsyncInit = function() {
     FB.init({
@@ -28,8 +28,6 @@ app.controller("loginCtrl",function($scope){
                 FB.api('/me', function(response) {
                     console.log('Good to see you, ' + response.name + '.');
                     accessCode = FB.getAuthResponse().accessToken;
-                    console.log(response);
-                    console.log(accessCode);
                     userId = response.id;
                 });
             } else {
