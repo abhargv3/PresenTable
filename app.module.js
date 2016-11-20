@@ -18,6 +18,7 @@ window.fbAsyncInit = function() {
 
 app.controller("loginCtrl",function($scope,$location){
     //Facebook Login
+    $scope.num = 2244;
     $scope.images = [];
     $scope.imageObj = [];
     $scope.ids = [];
