@@ -93,6 +93,13 @@ app.controller("loginCtrl",function($scope,$location){
                         console.log("lmao?");
                         console.log(response[j].imageUrl);
                         $scope.taggedPics.push(response[j].imageUrl);
+
+                        var img = new Image();
+                        var tble = document.getElementById('resultTable');
+                        img.onload = function(){
+                            tble.appendChild(img);
+                        };
+                        img.src = response[j].imageUrl;
                     }
                     console.log($scope.taggedPics);
                 },
@@ -101,7 +108,7 @@ app.controller("loginCtrl",function($scope,$location){
                 }
             );
         }
-        $location.path('/table');
+        //$location.path('/table');
     };
     $scope.gotoSearch = function(){
         $location.path('/results');
