@@ -72,7 +72,7 @@ app.controller("loginCtrl",function($scope,$location){
                 function(response){
                     console.log(response);
                     for(var j=0; j<response.length;j++){
-                        taggedPics[i].push(response[j].imageUrl);
+                        $scope.taggedPics[i].push(response[j].imageUrl);
                     }
                 },
                 function(response){
@@ -80,7 +80,7 @@ app.controller("loginCtrl",function($scope,$location){
                 }
             );
         }
-        console.log(taggedPics);
+        console.log($scope.taggedPics);
     };    
 });
 
