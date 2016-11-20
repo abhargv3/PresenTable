@@ -86,22 +86,38 @@ app.controller("loginCtrl",function($scope,$location){
                 console.log(response);
                     //console.log($scope.taggedPics);
                 console.log(response.length);
-                $scope.Value = response;
-                if(response.length>0){
-                        $location.path('/table');
-                    }
+                for(var j=0; j<response.length;j++){
+                    console.log("lmao?");
+                    console.log(response[j].imageUrl);
+                    //taggedPics.push(response[j].imageUrl);
+                    addImage(response[j].imageUrl);
+                }
+                    //console.log($scope.taggedPics[0]);
+                    //console.log($scope.taggedPics[2]);
+                    // console.log(taggedPics.length)
+                    // if(taggedPics.length>0){
+                    //     $scope.someArray = taggedPics;
+                    //     $location.path('/table');
+                    // }
                 },
             
             function(response){
-                console.log(response);
+                console.error(response);
             }
             );
         console.log("FUUUUUUK PLZ WORK");
         //console.log($scope.taggedPics.length);
     }
-    $scope.gotoSearch = function(){
+
+    $scope.addImage(url) {
+        var img = document.createElement('img');
+        img.src = url;
+        img.height = 300;
+        document.body.appendChild(img);
+    }
+    /*$scope.gotoSearch = function(){
         $location.path('/results');
         console.log($scope.taggedPics[0]);
-    }    
+    } */   
 });
 
