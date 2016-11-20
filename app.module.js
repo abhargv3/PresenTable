@@ -90,7 +90,7 @@ app.controller("loginCtrl",function($scope,$location){
                     console.log("lmao?");
                     console.log(response[j].imageUrl);
                     //taggedPics.push(response[j].imageUrl);
-                    addImage(response[j].imageUrl);
+                    $scope.addImage(response[j].imageUrl);
                 }
                     //console.log($scope.taggedPics[0]);
                     //console.log($scope.taggedPics[2]);
