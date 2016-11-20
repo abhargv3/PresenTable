@@ -33,7 +33,6 @@ app.controller("loginCtrl",function($scope,$location){
                     console.log('Good to see you, ' + response.name + '.');              
                     //accessCode = FB.getAuthResponse().accessToken;
                     user_photos = FB.getAuthResponse().user_photos;
-                    console.log(accessToken);
                     userId = response.id;
                 });
             } else {
