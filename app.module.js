@@ -80,7 +80,6 @@ app.controller("loginCtrl",function($scope,$location){
         $location.path('/results');
     };
     $scope.searchByTag = function(){
-        $scope.taggedPics = [];
         clarifaiApp.inputs.search($scope.tag[0]).then(
             function(response){
                 console.log(response);
