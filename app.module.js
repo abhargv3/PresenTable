@@ -29,6 +29,7 @@ app.controller("loginCtrl",function($scope,$location){
                 FB.api('/me', function(response) {
                     console.log('Good to see you, ' + response.name + '.');
                     accessCode = FB.getAuthResponse().accessToken;
+                    console.log(accessToken);
                     userId = response.id;
                 });
             } else {
