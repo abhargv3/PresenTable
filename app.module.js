@@ -71,7 +71,7 @@ app.controller("loginCtrl",function($scope,$location){
                 function(response){
                     console.log(response);
                     for(var j=0; j<response.length;j++){
-                        taggedPics[i].push(url:response[j].imageUrl);
+                        taggedPics[i].push(response[j].imageUrl);
                     }
                 },
                 function(response){
