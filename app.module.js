@@ -93,6 +93,7 @@ app.controller("loginCtrl",function($scope,$location){
                 }
                     //console.log($scope.taggedPics[0]);
                     //console.log($scope.taggedPics[2]);
+                    console.log(taggedPics.length);
                     if(taggedPics.length>0){
                         $scope.someArray = taggedPics;
                         $location.path('/table');
