@@ -82,6 +82,7 @@ app.controller("loginCtrl",function($scope,$location){
     }
     $scope.searchByTag = function(){
         $scope.tag = {name:$scope.keyword};
+        $scope.deleteAll();
         clarifaiApp.inputs.search($scope.tag).then(
             function(response){
                 console.log(response);
@@ -113,7 +114,16 @@ app.controller("loginCtrl",function($scope,$location){
         var img = document.createElement('img');
         img.src = url;
         img.height = 250;
-        document.body.appendChild(img);
+        var list = document.getElementById('image');
+        list.appendChild(img);
+    }
+
+    $scope.deleteAll = function(){
+        var list = document.getElementById('image');
+        while(list.hasChildNodes()){
+            list.removeChild(list.firstChild);
+        }
+
     }
     /*$scope.gotoSearch = function(){
         $location.path('/results');
