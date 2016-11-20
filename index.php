@@ -16,8 +16,19 @@
 
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--Clarifai Script-->
+      <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+      <script type="text/javascript">
+        var clarifaiApp = new Clarifai.App(
+            '9VKC0UBbx74gI39IkMyKxexyO_BUemWMMJFI0ukP',
+            'KnGRksrndn6UFXGs-a5t0LFNqz-ri25mDEhbWBf5'
+        );
+      </script>
+      <!--Local Script files -->
       <script type="text/javascript" src="app.route.js"></script>
       <script type="text/javascript" src="app.module.js"></script>
+
+
 </head>
     <body ng-app="myApp">
         {{2+3}}
