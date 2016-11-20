@@ -18,6 +18,7 @@ app.controller("loginCtrl",function($scope,$location){
     //Facebook Login
     $scope.images = [];
     $scope.imageObj = [];
+    $scope.ids = [];
     $scope.tag = [{type:'input', name:'Alcohol'}, {type:'input', name:'party'}, {type:'input', name:'profanity'}, {type:'input', name:'smoking'}, {type:'input', name:'solo cups'}];
     var userId;
     var accessCode;
@@ -48,7 +49,8 @@ app.controller("loginCtrl",function($scope,$location){
                 console.log($scope.images[0].picture);
                 for(var i=0; i<$scope.images.length; i++){
                     console.log($scope.images[i].picture);
-                    $scope.imageObj.push({url:$scope.images[i].picture, id:userId});
+                    $scope.imageObj.push({url:$scope.images[i].picture, id:parseInt(userId)+i});
+                    $scope.ids.push(parseInt(userId)+i);
                 };
                 console.log($scope.imageObj);
                 clarifaiApp.inputs.create($scope.imageObj)
