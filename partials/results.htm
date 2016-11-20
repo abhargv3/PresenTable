@@ -128,15 +128,13 @@ h4{
 	
 
 
-<div class="container-fluid">
+<div class="container-fluid" ng-repeat="{{imgArrays in taggedPics}}">
   
-  <div class="jumbotron_red jumbotron-fluid">
+  	<div class="jumbotron_red jumbotron-fluid">
 			<div class="container-fluid "> 	
 
 				  	<h4>
-				  	<p class="text-center"><kbd>25</kbd> of them contain <button type="button" class="btn btn-outline-danger">Alcohol</button></p>
-				  		
-				  		
+				  	<p class="text-center"><kbd>25</kbd> of them contain <button type="button" class="btn btn-outline-danger">{{tag[$index]}}</button></p>
 				  	</h4>
 			</div>
 	</div>
@@ -145,10 +143,10 @@ h4{
   <table class="table-responsive">
   
     <tbody>
-      <tr>
+      	<tr ng-repeat="{{pics in imgArrays}}">
         	<td>
         		<div class="padding_plz">
-        			<img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
+        			<img src="{{pics}}" class="img-responsive" alt="Responsive image">
         		</div>
 			</td>		
 			<td>
@@ -158,74 +156,14 @@ h4{
 					</div>
 				</div>
 			</td>
-		</tr>
-      <tr>
-        	<td>
-        		<div class="padding_plz">
-        			<img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
-        		</div>
-			</td>
-			<td>
-				<div class="padding_plz">	
-					<img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
-				</div>
-			</td>
-		</tr>
-		<tr>
-       		 <td>
-       		 	<div class="padding_plz">	
-       		 		<img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
-       		 	</div>
-			</td>
-			<td>
-				<div class="padding_plz">
-					<img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
-				</div>
-			</td>
-		</tr>
-		<tr>
-        	<td>
-        		<div class="padding_plz">	
-        			<img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
-        		</div>
-			</td>
-			<td>
-				<div class="padding_plz">
-					<img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
-				</div>
-			</td>
-		</tr>
-		<tr>
-       		 <td>
-       		 	<div class="padding_plz">
-       		 		<img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
-       		 	</div>
-			</td>
-			<td>
-				<div class="padding_plz">
-					<img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
-				</div>
-			</td>
-		</tr>
-		<tr>
-        	<td>
-        		<div class="padding_plz">
-        			<img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
-        		</div>
-			</td>
-			<td>
-				<div class="padding_plz">
-					<img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
-				</div>
-			</td>
-      </tr>
+		</tr> 
     </tbody>
   </table>
   </div>
 </div>
 
 
-
+<!--
 <div class="container_fluid">
 	<div class="row">
 	    <div class="col-sm-4 col-md-4">
@@ -269,4 +207,6 @@ h4{
 
 
 <hr my-2>
+-->
 {{2+3}}
+

@@ -21,7 +21,8 @@ app.controller("loginCtrl",function($scope,$location){
     $scope.images = [];
     $scope.imageObj = [];
     $scope.ids = [];
-    $scope.tag = [{type:'input', name:'Alcohol'}, {type:'input', name:'party'}, {type:'input', name:'profanity'}, {type:'input', name:'smoking'}, {name:'people'}];
+    $scope.tag = [{name:'alcohol'}, {name:'party'}, {name:'profanity'}, {name:'smoking'}, {name:'people'}];
+    $scope.taggedPics = [[],[]];
     var userId;
     var accessCode;
     var user_photos;
@@ -64,16 +65,19 @@ app.controller("loginCtrl",function($scope,$location){
         $location.path('/results');
     };
     $scope.searchByTag = function(){
-        console.log($scope.tag);
-        clarifaiApp.inputs.search($scope.tag).then(
-            function(response){
-                console.log(response);
-            },
-            function(response){
-                console.log(response);
-            }
-        );
-
+        for(var i=0; i<$scope.tag.length;i++){
+            console.log($scope.tag[i]);
+            clarifaiApp.inputs.search($scope.tag[i]).then(
+                function(response){
+                    console.log(response);
+                    for(var j=0; j<response.length;j++)
+                        taggedPics[i].push(url:response[j].imageUrl);
+                },
+                function(response){
+                    console.log(response);
+                }
+            );
+        }
     };    
 });
 
