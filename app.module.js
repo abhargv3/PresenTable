@@ -55,6 +55,7 @@ app.controller("loginCtrl",function($scope,$location){
         for(var i=0; i<images.length; i++){
           imageObj.push({url:images[i], id:userId});
         };
+        console.log(imageObj);
         clarifaiApp.inputs.create(imageObj)
         .then(
             $scope.searchByTag(),
@@ -66,6 +67,7 @@ app.controller("loginCtrl",function($scope,$location){
     };
 
     $scope.searchByTag = function(){
+        console.log(tag);
         clarifaiApp.inputs.search(tag).then(
             function(response){
                 console.log(response);
