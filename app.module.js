@@ -70,8 +70,9 @@ app.controller("loginCtrl",function($scope,$location){
             clarifaiApp.inputs.search($scope.tag[i]).then(
                 function(response){
                     console.log(response);
-                    for(var j=0; j<response.length;j++)
+                    for(var j=0; j<response.length;j++){
                         taggedPics[i].push(url:response[j].imageUrl);
+                    }
                 },
                 function(response){
                     console.log(response);
