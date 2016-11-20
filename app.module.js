@@ -101,7 +101,7 @@ app.controller("loginCtrl",function($scope,$location){
                 }
             );
         }
-        
+        $location.path('/table');
     };    
 });
 

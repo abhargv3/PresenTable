@@ -14,6 +14,12 @@ app.config(function($routeProvider){
                 controller:"loginCtrl"
             }  
          )
+    .when("/table",
+            {
+                templateUrl:"partials/table.htm",
+                controller:"loginCtrl"
+            }  
+         )
     .otherwise(
             {
                 redirectTo:"/home"
