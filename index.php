@@ -18,22 +18,19 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <script type="text/javascript" src="app.module.js"></script>
 </head>
-  <body ng-app="loginApp">
-    <div class="container-fluid" ng-controller="loginCtrl">
-      <border1>
-          <h1>
-           <strong>Welcome to PresenTable V{{0+1}} </strong>
-         </h1>
-      </border1>
-      <p class = "border1">PresenTable fixes up your Facebook page to make you more presentable to recruiters </p> 
-      <button type="button" class="btn btn-info btn-lg" ng-click="FBLogin()">Login</button>
-      <a class="btn btn-info btn-lg active" role="button" aria-pressed="true" ng-click="findPhoto()">Be PresenTable </a>
-      <div ng-repeat="image in images">
-        <!--<img src="{{image.picture}}">-->
-        <br/> {{image.picture}}
-      </div>
-  </div>
-
-
-  </body>
+    <body ng-app="loginApp">
+        <div class="container-fluid" ng-controller="loginCtrl">
+            <border1>
+            <h1>
+                <strong>Welcome to PresenTable V{{0+1}} </strong>
+            </h1>
+            </border1>
+            <p class = "border1">PresenTable fixes up your Facebook page to make you more presentable to recruiters </p> 
+            <button type="button" class="btn btn-info btn-lg" ng-click="FBLogin()">Login</button>
+            <a class="btn btn-info btn-lg active" role="button" aria-pressed="true" ng-click="findPhoto()">Be PresenTable </a>
+            <div ng-repeat="image in images">
+                <img src="{{image.picture}}">
+            </div>
+        </div>
+    </body>
 </html>
