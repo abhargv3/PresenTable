@@ -43,32 +43,25 @@ app.controller("loginCtrl",function($scope,$location){
             "GET",
             {"fields":"picture"},
             function (response) {
-              console.log(response.data); //This is an array
-              $scope.images = response.data;
-              console.log($scope.images[0].picture);
+                console.log(response.data); //This is an array
+                $scope.images = response.data;
+                console.log($scope.images[0].picture);
+                for(var i=0; i<$scope.images.length; i++){
+                    console.log($scope.images[i].picture);
+                    $scope.imageObj.push({url:$scope.images[i].picture, id:userId});
+                };
+                console.log($scope.imageObj);
+                clarifaiApp.inputs.create($scope.imageObj)
+                .then(
+                    $scope.searchByTag(),
+                    function(err){
+                        console.error(err);
+                    }
+                );
             }
         );
         $location.path('/results');
     };
-
-    $scope.createObject = function(){
-        console.log()
-        console.log($scope.images.length);
-        for(var i=0; i<$scope.images.length; i++){
-            console.log($scope.images[i].picture);
-            $scope.imageObj.push({url:$scope.images[i].picture, id:userId});
-        };
-        console.log($scope.imageObj);
-        clarifaiApp.inputs.create($scope.imageObj)
-        .then(
-            $scope.searchByTag(),
-            function(err){
-                console.error(err);
-            }
-        );
-
-    };
-
     $scope.searchByTag = function(){
         console.log($scope.tag);
         clarifaiApp.inputs.search($scope.tag).then(
