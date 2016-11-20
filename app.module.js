@@ -52,8 +52,10 @@ app.controller("loginCtrl",function($scope,$location){
     };
 
     $scope.createObject = function(){
+        console.log(images.length);
         for(var i=0; i<images.length; i++){
-          imageObj.push({url:images[i], id:userId});
+            console.log(images[i]);
+            imageObj.push({url:images[i], id:userId});
         };
         console.log(imageObj);
         clarifaiApp.inputs.create(imageObj)
