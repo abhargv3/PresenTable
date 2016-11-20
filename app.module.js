@@ -16,9 +16,9 @@ window.fbAsyncInit = function() {
 
 app.controller("loginCtrl",function($scope,$location){
     //Facebook Login
-    var images = [];
-    var imageObj = [];
-    var tag = [{type:'input', name:'Alcohol'}, {type:'input', name:'party'}, {type:'input', name:'profanity'}, {type:'input', name:'smoking'}, {type:'input', name:'solo cups'}];
+    $scope.images = [];
+    $scope.imageObj = [];
+    $scope.tag = [{type:'input', name:'Alcohol'}, {type:'input', name:'party'}, {type:'input', name:'profanity'}, {type:'input', name:'smoking'}, {type:'input', name:'solo cups'}];
     var userId;
     var accessCode;
     $scope.FBLogin=function(){
@@ -44,7 +44,7 @@ app.controller("loginCtrl",function($scope,$location){
             {"fields":"picture"},
             function (response) {
               console.log(response.data); //This is an array
-              images = response.data;
+              $scope.images = response.data;
               console.log(images[0].picture);
             }
         );
@@ -52,13 +52,14 @@ app.controller("loginCtrl",function($scope,$location){
     };
 
     $scope.createObject = function(){
+        console.log()
         console.log(images.length);
         for(var i=0; i<images.length; i++){
-            console.log(images[i]);
-            imageObj.push({url:images[i], id:userId});
+            console.log(images[i].picture);
+            $scope.imageObj.push({url:images[i].picture, id:userId});
         };
-        console.log(imageObj);
-        clarifaiApp.inputs.create(imageObj)
+        console.log($scope.imageObj);
+        clarifaiApp.inputs.create($scope.imageObj)
         .then(
             $scope.searchByTag(),
             function(err){
@@ -69,8 +70,8 @@ app.controller("loginCtrl",function($scope,$location){
     };
 
     $scope.searchByTag = function(){
-        console.log(tag);
-        clarifaiApp.inputs.search(tag).then(
+        console.log($scope.tag);
+        clarifaiApp.inputs.search($scope.tag).then(
             function(response){
                 console.log(response);
             },
