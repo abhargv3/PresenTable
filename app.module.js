@@ -28,7 +28,7 @@ app.controller("loginCtrl",function($scope,$location){
     var accessCode;
     var user_photos;
 
-    $scope.deleteAll = function(){}
+    $scope.deleteAll = function(){
         clarifaiApp.inputs.delete().then(
         function(response) {
             // do something with response
