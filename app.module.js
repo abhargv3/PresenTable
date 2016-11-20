@@ -23,7 +23,7 @@ app.controller("loginCtrl",function($scope,$location){
     $scope.imageObj = [];
     $scope.ids = [];
     $scope.tag = [{name:'indoors'}, {name:'man'}, {name:'woman'}, {name:'wear'}, {name:'people'}];
-    $scope.taggedPics = [[],[],[],[],[]];
+    $scope.taggedPics = [];
     var userId;
     var accessCode;
     var user_photos;
@@ -88,9 +88,9 @@ app.controller("loginCtrl",function($scope,$location){
                     for(var j=0; j<response.length;j++){
                         console.log("lmao?");
                         console.log(response[j].imageUrl);
-                        $scope.taggedPics[i].push(response[j].imageUrl);
-                        console.log($scope.taggedPics[i][j]);
+                        $scope.taggedPics.push(response[j].imageUrl);
                     }
+                    console.log($scope.taggedPics);
                 },
                 function(response){
                     console.log(response);
