@@ -118,7 +118,7 @@ h4{
 	
 
 
-<div class="container-fluid" ><!--ng-repeat="{{imgArrays in taggedPics}}-->
+<div class="container-fluid" ng-repeat="{{imgArrs in taggedPics}}">
   
   	<div class="jumbotron_red jumbotron-fluid">
 			<div class="container-fluid "> 	
@@ -133,7 +133,7 @@ h4{
   <table class="table-responsive">
   
     <tbody>
-      	<tr>
+      	<tr ng-repeat="{{pics in imgArrs}}">
         	<td>
         		<div class="padding_plz">
         			<img src="{{pics}}" class="img-responsive" alt="Responsive image">
