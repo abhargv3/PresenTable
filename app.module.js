@@ -31,14 +31,25 @@ app.controller("loginCtrl",function($scope,$location){
                 console.log('Welcome!  Fetching your information.... ');
                 FB.api('/me', function(response) {
                     console.log('Good to see you, ' + response.name + '.');
+
+                                
                     //accessCode = FB.getAuthResponse().accessToken;
                     user_photos = FB.getAuthResponse().user_photos;
                     console.log(accessToken);
                     userId = response.id;
                 });
+
             } else {
              console.log('User cancelled login or did not fully authorize.');
             }
+            FB.api(
+                  '/me/photos',
+                  'GET',
+                  {},
+                  function(response) {
+                      console.log(response);
+                  }
+                );
         },{scope:'user_photos', return_scopes:true});
 
     };
