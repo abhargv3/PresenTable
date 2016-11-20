@@ -41,8 +41,8 @@ app.controller("loginCtrl",function($scope,$location){
 
     $scope.findPhoto = function(){
         FB.api(
-            "/me/photos/",
-            "GET",
+            '/me/photos',
+            'GET',
             {"fields":"picture"},
             function (response) {
                 console.log(response.data); //This is an array
