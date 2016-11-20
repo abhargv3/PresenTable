@@ -23,7 +23,7 @@ app.controller("loginCtrl",function($scope,$location){
     $scope.imageObj = [];
     $scope.ids = [];
     $scope.tag = [{name:'indoors'}, {name:'man'}, {name:'woman'}, {name:'wear'}, {name:'people'}];
-    $scope.taggedPics = [];
+    $scope.taggedPics;
     var userId;
     var accessCode;
     var user_photos;
