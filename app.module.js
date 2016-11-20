@@ -92,6 +92,8 @@ app.controller("loginCtrl",function($scope,$location){
                 }
                     //console.log($scope.taggedPics[0]);
                     //console.log($scope.taggedPics[2]);
+                    if($scope.taggedPics.length>0)
+                        $location.path('/table');
             },
             function(response){
                 console.log(response);
@@ -99,8 +101,6 @@ app.controller("loginCtrl",function($scope,$location){
             );
         console.log("FUUUUUUK PLZ WORK");
         console.log($scope.taggedPics.length);
-        if($scope.taggedPics.length>0)
-            $location.path('/table');
     };
     $scope.gotoSearch = function(){
         $location.path('/results');
