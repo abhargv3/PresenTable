@@ -1,3 +1,9 @@
+var clarifaiApp = new Clarifai.App(
+        '9VKC0UBbx74gI39IkMyKxexyO_BUemWMMJFI0ukP',
+        'KnGRksrndn6UFXGs-a5t0LFNqz-ri25mDEhbWBf5'
+);
+
+
 window.fbAsyncInit = function() {
     FB.init({
       appId      : '152005755273941',
@@ -14,9 +20,11 @@ window.fbAsyncInit = function() {
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
-app.controller("loginCtrl",function($scope){
+app.controller("loginCtrl",function($scope,$location){
     //Facebook Login
     $scope.images = [];
+    $scope.imageObj = [];
+    $scope.tag = [{type:'input', name:'Alcohol'}, {type:'input', name:'party'}, {type:'input', name:'profanity'}, {type:'input', name:'smoking'}, {type:'input', name:'solo cups'}];
     var userId;
     var accessCode;
     $scope.FBLogin=function(){
@@ -43,11 +51,37 @@ app.controller("loginCtrl",function($scope){
             function (response) {
               console.log(response.data); //This is an array
               images = response.data;
+              createObject();
               console.log(images[0].picture);
             }
         );
+        $location.path('/results');
+    };
 
-    }
-          
+    $scope.createObject = function(){
+        for(var i=0; i<images.length; i++){
+          imageObj.push({url:images[i], id:userId});
+        };
+        clarifaiApp.inputs.create(imageObj)
+        .then(
+            searchByTag(),
+            function(err){
+                console.error(err);
+            }
+        );
+
+    };
+
+    $scope.searchByTag = function(){
+        clarifaiApp.inputs.search(tag).then(
+            function(response){
+                console.log(response);
+            },
+            function(response){
+                console.log(response);
+            }
+        );
+
+    };    
 });
 
