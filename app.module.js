@@ -45,7 +45,7 @@ app.controller("loginCtrl",function($scope,$location){
             function (response) {
               console.log(response.data); //This is an array
               $scope.images = response.data;
-              console.log(images[0].picture);
+              console.log($scope.images[0].picture);
             }
         );
         $location.path('/results');
@@ -53,10 +53,10 @@ app.controller("loginCtrl",function($scope,$location){
 
     $scope.createObject = function(){
         console.log()
-        console.log(images.length);
-        for(var i=0; i<images.length; i++){
-            console.log(images[i].picture);
-            $scope.imageObj.push({url:images[i].picture, id:userId});
+        console.log($scope.images.length);
+        for(var i=0; i<$scope.images.length; i++){
+            console.log($scope.images[i].picture);
+            $scope.imageObj.push({url:$scope.images[i].picture, id:userId});
         };
         console.log($scope.imageObj);
         clarifaiApp.inputs.create($scope.imageObj)
