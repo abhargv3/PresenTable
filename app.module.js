@@ -113,8 +113,6 @@ app.controller("loginCtrl",function($scope,$location){
         img.src = url;
         img.height = 250;
         document.body.appendChild(img);
-        var br = document.createElement("br");
-        document.body.appendChild(br);
     }
     /*$scope.gotoSearch = function(){
         $location.path('/results');
