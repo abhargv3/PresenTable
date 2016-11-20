@@ -27,6 +27,20 @@ app.controller("loginCtrl",function($scope,$location){
     var userId;
     var accessCode;
     var user_photos;
+
+    $scope.deleteAll = function(){}
+        clarifaiApp.inputs.delete().then(
+        function(response) {
+            // do something with response
+            console.log("Deleting stuff...");
+            },
+            function(err) {
+                        // there was an error
+            }
+        );
+    }
+
+
     $scope.FBLogin=function(){
         FB.login(function(response) {
             if (response.authResponse) {
@@ -54,16 +68,6 @@ app.controller("loginCtrl",function($scope,$location){
                         $scope.ids.push(userId+i);
                     };
                     console.log($scope.imageObj);
-
-                    clarifaiApp.inputs.delete().then(
-                      function(response) {
-                        // do something with response
-                        console.log("Deleting stuff...");
-                      },
-                      function(err) {
-                        // there was an error
-                      }
-                    );
 
                     clarifaiApp.inputs.create($scope.imageObj)
                     .then(
