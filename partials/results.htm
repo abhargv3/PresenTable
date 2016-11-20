@@ -10,6 +10,7 @@ hr.my-2{
 
 .jumbotron_blue{
 	background-color:#B0E0E6 !important;
+	max_height: 600px;
 }
 
 .jumbotron_purple{
@@ -28,9 +29,12 @@ h4{
 	display: inline;
 }
 
-p.border{
-	border-right_width: 15px;
-	border-left_width: 15px;
+.short_width{
+	max-length: 80%;
+}
+
+.no_overflow{
+	overflow:hidden;
 
 }
 
@@ -54,13 +58,13 @@ p.border{
 
 </style>
   
-<!--  <meta charset="utf-8">
+  <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  
--->
+
 
 <!--<div class="pull-left">-->
 
@@ -87,7 +91,7 @@ p.border{
 <hr my-2>
 
 <div class="jumbotron_purple jumbotron-fluid">
-	<div class="container-fluid"> 	
+	<div class="container-fluid short_width"> 	
 	  		<!--<div class="col-xs-6 col-sm-3">-->
 		  	  <h3 class="text-center">Search for tags you wish to remove!</h3>  	
 
@@ -123,6 +127,87 @@ p.border{
 				  	</h4>
 			</div>
 	</div>
+
+
+<div class="container-fluid">
+  <h2>Table</h2>
+  <p>This is a table of images from your facebook page that you need to delete!</p>
+  <div class="table-responsive">
+  <table class="table">
+  
+    <tbody>
+      <tr>
+        	<td><img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
+</td>
+		</tr>
+      <tr>
+        	<td><img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
+</td>
+		</tr>
+		<tr>
+       		 <td><img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
+</td>
+		</tr>
+		<tr>
+        	<td><img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
+</td>
+		</tr>
+		<tr>
+       		 <td><img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
+</td>
+		</tr>
+		<tr>
+        	<td><img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
+</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
+
+<div class="container_fluid">
+	<div class="row">
+	    <div class="col-sm-4 col-md-4">
+	        <div class="row">
+	            <div class="col-sm-12 col-md-6 no_overflow" >
+	            	<img src="http://41.media.tumblr.com/2c189abde1066433264d5038df6172b8/tumblr_ns6s24wf0M1uye0aio1_1280.jpg" class="img-responsive" alt="Responsive image">
+
+	            </div>
+	            <div class="col-sm-12 col-md-6 no_overflow" >
+	            	<img src="http://zevyaroslavsky.org/wp-content/uploads/parties550.jpg" class="img-responsive" alt="Responsive image">
+
+	            </div>
+	        </div>
+	    </div>
+	    <div class="col-sm-4 col-md-4">
+	        <div class="row">
+	            <div class="col-sm-12 col-md-6" >
+	            		<img src="http://www.viralthread.com/wp-content/uploads/2016/10/red-solo.jpg" class="img-responsive" alt="Responsive image">
+
+	            </div>
+	            <div class="col-sm-12 col-md-6" >
+	            		<img src="https://padraigoconnor.files.wordpress.com/2013/03/crazy-party.png" class="img-responsive" alt="Responsive image">
+	            </div>
+	        </div>
+	    </div>
+	    <div class="col-sm-4 col-md-4">
+	        <div class="row">
+	            <div class="col-sm-12 col-md-6" >
+	            	<img src="http://www.lovethispic.com/uploaded_images/crazy_club_party.jpg" class="img-responsive" alt="Responsive image">
+	            </div>
+	            <div class="col-sm-12 col-md-6" >
+	           		<img src="http://images.medicaldaily.com/sites/medicaldaily.com/files/2015/10/30/smoking-and-drinking.jpg" class="img-responsive" alt="Responsive image">
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+
+
+
 
 <hr my-2>
 {{2+3}}
