@@ -81,25 +81,22 @@ app.controller("loginCtrl",function($scope,$location){
     };
     $scope.searchByTag = function(){
         $scope.taggedPics = [];
-        for(var i=0; i<$scope.tag.length;i++){
-            //console.log($scope.tag[i].name);
-            //$scope.taggedPics[i] = [];
-            clarifaiApp.inputs.search($scope.tag[i]).then(
-                function(response){
-                    console.log(response);
+        clarifaiApp.inputs.search($scope.tag[0]).then(
+            function(response){
+                console.log(response);
                     //console.log($scope.taggedPics);
-                    console.log(response.length);
-                    for(var j=0; j<response.length;j++){
-                        console.log("lmao?");
-                        console.log(response[j].imageUrl);
-                        $scope.taggedPics.push(response[j].imageUrl);
-                    }
+                console.log(response.length);
+                for(var j=0; j<response.length;j++){
+                    console.log("lmao?");
+                    console.log(response[j].imageUrl);
+                    $scope.taggedPics.push(response[j].imageUrl);
+                }
                     //console.log($scope.taggedPics[0]);
                     //console.log($scope.taggedPics[2]);
-                },
-                function(response){
-                    console.log(response);
-                }
+            },
+            function(response){
+                console.log(response);
+            }
             );
         }
         console.log("FUUUUUUK PLZ WORK");
