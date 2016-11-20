@@ -89,6 +89,7 @@ app.controller("loginCtrl",function($scope,$location){
                         console.log("lmao?");
                         console.log(response[j].imageUrl);
                         $scope.taggedPics[i].push(response[j].imageUrl);
+                        console.log($scope.taggedPics[i][j]);
                     }
                 },
                 function(response){
