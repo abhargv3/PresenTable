@@ -45,7 +45,6 @@ app.controller("loginCtrl",function($scope,$location){
             function (response) {
               console.log(response.data); //This is an array
               images = response.data;
-              createObject();
               console.log(images[0].picture);
             }
         );
