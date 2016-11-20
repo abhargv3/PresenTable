@@ -31,7 +31,6 @@
 
 </head>
     <body ng-app="myApp">
-        {{2+3}}
        <ng-view></ng-view>
     </body>
 </html>

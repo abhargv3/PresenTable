@@ -44,11 +44,11 @@ app.controller("loginCtrl",function($scope,$location){
                   {"fields":"images"},
                   function(response) {
                     console.log(response.data); //This is an array
-                    $scope.images = response.data;
-                    console.log($scope.images[0][1].source);
-                    for(var i=0; i<$scope.images.length; i++){
+                    $scope.links = response.data;
+                    console.log($scope.links[0].images[0].source);
+                    for(var i=0; i<$scope.links.length; i++){
                         //console.log($scope.images[i].source);
-                        $scope.imageObj.push({url:$scope.images[i][1].source, id:userId+i});
+                        $scope.imageObj.push({url:$scope.links[i].images[0].source, id:userId+i});
                         $scope.ids.push(userId+i);
                     };
                     console.log($scope.imageObj);
