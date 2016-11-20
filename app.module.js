@@ -1,6 +1,8 @@
 window.fbAsyncInit = function() {
     FB.init({
       appId      : '152005755273941',
+      status     : true,
+      cookie     : true,
       xfbml      : true,
       version    : 'v2.6'
     });
@@ -22,6 +24,7 @@ app.controller("loginCtrl",function($scope,$location){
     $scope.tag = [{type:'input', name:'Alcohol'}, {type:'input', name:'party'}, {type:'input', name:'profanity'}, {type:'input', name:'smoking'}, {type:'input', name:'solo cups'}];
     var userId;
     var accessCode;
+    var user_photos;
     $scope.FBLogin=function(){
         FB.login(function(response) {
             if (response.authResponse) {
@@ -29,13 +32,14 @@ app.controller("loginCtrl",function($scope,$location){
                 FB.api('/me', function(response) {
                     console.log('Good to see you, ' + response.name + '.');
                     accessCode = FB.getAuthResponse().accessToken;
+                    user_photos = FB.getAuthResponse().user_photos;
                     console.log(accessToken);
                     userId = response.id;
                 });
             } else {
              console.log('User cancelled login or did not fully authorize.');
             }
-        });
+        },{scope:'user_photos', return_scopes:true});
 
     };
 
