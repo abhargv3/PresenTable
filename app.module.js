@@ -105,11 +105,10 @@ app.controller("loginCtrl",function($scope,$location){
                 console.error(response);
             }
             );
-        console.log("FUUUUUUK PLZ WORK");
         //console.log($scope.taggedPics.length);
     }
 
-    $scope.addImage(url) {
+    $scope.addImage = function(url) {
         var img = document.createElement('img');
         img.src = url;
         img.height = 300;
