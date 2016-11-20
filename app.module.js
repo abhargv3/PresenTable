@@ -60,6 +60,7 @@ app.controller("loginCtrl",function($scope,$location){
                             console.error(err);
                         }
                     );
+                });
         },{scope:'user_photos', return_scopes:true});
         $location.path('/results');
     };
