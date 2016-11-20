@@ -86,16 +86,8 @@ app.controller("loginCtrl",function($scope,$location){
                 console.log(response);
                     //console.log($scope.taggedPics);
                 console.log(response.length);
-                for(var j=0; j<response.length;j++){
-                    console.log("lmao?");
-                    console.log(response[j].imageUrl);
-                    taggedPics.push(response[j].imageUrl);
-                }
-                    //console.log($scope.taggedPics[0]);
-                    //console.log($scope.taggedPics[2]);
-                    console.log(taggedPics.length);
-                    if(taggedPics.length>0){
-                        $scope.someArray = taggedPics;
+                $scope.Value = response;
+                if(response.length>0){
                         $location.path('/table');
                     }
                 },

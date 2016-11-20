@@ -5,9 +5,9 @@
 
             </tr>
             {{someArray.length}}
-            <tr ng-repeat="links in someArray">
+            <tr ng-repeat="res in Value">
                     <td>{{$index}}</td>
-                    <td>{{links}}</td>
+                    <td>{{res.imageUrl}}</td>
             </tr>
             <button ng-click="gotoSearch()">Go to Search</button>
 </table>
