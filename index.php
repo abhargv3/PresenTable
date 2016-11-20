@@ -20,7 +20,7 @@
       <script type="text/javascript" src="app.module.js"></script>
 
       <!--Clarifai Script-->
-      <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+      <script type="text/javascript" src="bundle.js"></script>
 </head>
     <body ng-app="myApp">
         {{2+3}}
