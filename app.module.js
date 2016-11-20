@@ -16,9 +16,9 @@ window.fbAsyncInit = function() {
 
 app.controller("loginCtrl",function($scope,$location){
     //Facebook Login
-    $scope.images = [];
-    $scope.imageObj = [];
-    $scope.tag = [{type:'input', name:'Alcohol'}, {type:'input', name:'party'}, {type:'input', name:'profanity'}, {type:'input', name:'smoking'}, {type:'input', name:'solo cups'}];
+    var images = [];
+    var imageObj = [];
+    var tag = [{type:'input', name:'Alcohol'}, {type:'input', name:'party'}, {type:'input', name:'profanity'}, {type:'input', name:'smoking'}, {type:'input', name:'solo cups'}];
     var userId;
     var accessCode;
     $scope.FBLogin=function(){
