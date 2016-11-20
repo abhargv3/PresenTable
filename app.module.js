@@ -102,7 +102,8 @@ app.controller("loginCtrl",function($scope,$location){
                 }
             );
         }
-        $location.path('/table');
+        if($scope.taggedPics.length>0)
+            $location.path('/table');
     };
     $scope.gotoSearch = function(){
         $location.path('/results');
