@@ -19,6 +19,7 @@
       <script type="text/javascript" src="app.module.js"></script>
 </head>
     <body ng-app="myApp">
+        {{2+3}}
        <ng-view></ng-view>
     </body>
 </html>
