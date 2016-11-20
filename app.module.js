@@ -45,10 +45,10 @@ app.controller("loginCtrl",function($scope,$location){
                   function(response) {
                     console.log(response.data); //This is an array
                     $scope.images = response.data;
-                    console.log($scope.images[0].picture);
+                    console.log($scope.images[0][1].source);
                     for(var i=0; i<$scope.images.length; i++){
-                        console.log($scope.images[i].source);
-                        $scope.imageObj.push({url:$scope.images[i].source, id:userId+i});
+                        //console.log($scope.images[i].source);
+                        $scope.imageObj.push({url:$scope.images[i][1].source, id:userId+i});
                         $scope.ids.push(userId+i);
                     };
                     console.log($scope.imageObj);
