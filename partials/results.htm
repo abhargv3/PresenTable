@@ -1,4 +1,5 @@
 <style>
+
 hr.my-2{
 	width: 80%;
 	margin-left: auto;
@@ -7,8 +8,12 @@ hr.my-2{
 	<!--background-color:#f3f6db;-->
 }
 
-.jumbotron{
+.jumbotron_blue{
 	background-color:#B0E0E6 !important;
+}
+
+.jumbotron_purple{
+	background-color:#FAFAD2 !important;
 }
 
 kbd.total {
@@ -19,6 +24,28 @@ kbd.alcohol{
 	background-color:#ff0066;
 
 }
+h4{
+	display: inline;
+}
+
+#imaginary_container{
+    margin-top:2%; /* Don't copy this */
+    margin-bottom:5%;
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+
 </style>
   
   <meta charset="utf-8">
@@ -31,8 +58,10 @@ kbd.alcohol{
 
 <!--<div class="pull-left">-->
 
+
+
 	
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron_blue jumbotron-fluid">
 	<div class="container-fluid"> 	
 	  		<!--<div class="col-xs-6 col-sm-3">-->
 		  	  <h1 class="display-3"><b>Results</b></h1>  		
@@ -41,33 +70,51 @@ kbd.alcohol{
 		  	  
 				<div class="alert alert-success" role="alert">
 
-				  	<h4>
+				  	<h3>
 				  		<p> You have <kbd>1053</kbd> photos</p>
 				  		<!--<a href="https://www.facebook.com/" class="alert-link">You have <kbd>1053</kbd> photos</a>
 				  		<p class="bg-danger">-->
-				  	</h4>
+				  	</h3>
 			<!--</div>-->
 	 			</div>
+<hr my-2>
 
-	   		<div class="alert alert-success" role="alert">
+<div class="jumbotron_purple jumbotron-fluid">
+	<div class="container-fluid"> 	
+	  		<!--<div class="col-xs-6 col-sm-3">-->
+		  	  <h3 class="display-3">Search for tags you wish to remove!</h3>  	
+
+
+<div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container"> 
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control"  placeholder="Search: e.g. Alcohol, parties, puppues" >
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>  
+                    </span>
+                </div>
+            </div>
+        </div>
+	</div>
+
+
+
+	</div>
+</div>
+	
+	<div class="container-fluid">
+	   		<div class="alert alert-danger" role="alert">
 
 				  	<h4>
-				  	<p><kbd>25</kbd>of them have <button type="button" class="btn btn-outline-danger">Alcohol</button></p>
-				  		<!--<a href="https://www.facebook.com/" class="alert-link">You have <kbd>1053</kbd> photos</a>
-				  		<p class="bg-danger">-->
+				  	<p class="text-center"><kbd>25</kbd> of them contain <button type="button" class="btn btn-outline-danger">Alcohol</button></p>
+				  		
+				  		
 				  	</h4>
-			<!--</div>-->
-	 			</div>
+			</div>
+	</div>
 
+<hr my-2>
 
-
-	  		
-	  <!--</div>-->
-<!--</div>-->
-	 	<div class="container">
-			<p>This is some text.</p>
-	  		<p>This is another text.</p>
-		</div>
-
-
-<!--</div>-->
