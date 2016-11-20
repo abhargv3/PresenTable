@@ -75,17 +75,6 @@ h4{
 
 </style>
 
-<div class="jumbotron_green jumbotron-fluid">
-	<div class="container-fluid short_width"> 	
-
-		<h3>
-		<p class="text-center"> You have <kbd>{{num}}</kbd> photos</p>
-				  		<!--<a href="https://www.facebook.com/" class="alert-link">You have <kbd>1053</kbd> photos</a>
-				  		<p class="bg-danger">-->
-		</h3>
-			<!--</div>-->
-	</div>
-</div>
 <hr my-2>
 <div class="jumbotron_yellow jumbotron-fluid">
 	<div class="container-fluid short_width"> 	
@@ -97,7 +86,7 @@ h4{
         <div class="col-sm-6 col-sm-offset-3">
             <div id="imaginary_container"> 
                 <div class="input-group stylish-input-group">
-                    <input type="text" class="form-control"  placeholder="Search: e.g. Alcohol, parties, puppies" >
+                    <input type="text" class="form-control" ng-model="keyword" placeholder="Search: e.g. Alcohol, parties, puppies" >
                     <span class="input-group-addon">
                         <button type="submit" ng-click="searchByTag()">
                             <span class="glyphicon glyphicon-search"></span>

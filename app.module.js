@@ -22,7 +22,7 @@ app.controller("loginCtrl",function($scope,$location){
     $scope.images = [];
     $scope.imageObj = [];
     $scope.ids = [];
-    $scope.tag = [{name:'indoors'}, {name:'man'}, {name:'woman'}, {name:'wear'}, {name:'people'}];
+    $scope.tag = {name:'people'};
     var taggedPics;
     var userId;
     var accessCode;
@@ -81,7 +81,8 @@ app.controller("loginCtrl",function($scope,$location){
         $location.path('/results');
     }
     $scope.searchByTag = function(){
-        clarifaiApp.inputs.search($scope.tag[4]).then(
+        $scope.tag = {name:$scope.keyword};
+        clarifaiApp.inputs.search($scope.tag).then(
             function(response){
                 console.log(response);
                     //console.log($scope.taggedPics);
