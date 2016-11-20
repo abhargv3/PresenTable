@@ -18,7 +18,7 @@ window.fbAsyncInit = function() {
 
 app.controller("loginCtrl",function($scope){
     //Facebook Login
-    $scope.imageURLs = [];
+    $scope.images = [];
     var userId;
     var accessCode;
     $scope.FBLogin=function(){
@@ -46,6 +46,7 @@ app.controller("loginCtrl",function($scope){
             {"fields":"picture"},
             function (response) {
               console.log(response.data); //This is an array
+              images = response.data;
             }
         );
 
