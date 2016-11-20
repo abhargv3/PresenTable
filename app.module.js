@@ -93,14 +93,6 @@ app.controller("loginCtrl",function($scope,$location){
                         console.log("lmao?");
                         console.log(response[j].imageUrl);
                         $scope.taggedPics.push(response[j].imageUrl);
-
-                        var table = document.getElementById('resultTable').rows[j];
-                        var row = table.insertCell(-1);
-                        row.innerHTML="New cell";
-
-                        var img = new document.createElement('img');
-                        img.src = response[j].imageUrl;
-                        row.appendChild(img);
                     }
                     console.log($scope.taggedPics);
                 },
@@ -109,7 +101,7 @@ app.controller("loginCtrl",function($scope,$location){
                 }
             );
         }
-        //$location.path('/table');
+        $location.path('/table');
     };
     $scope.gotoSearch = function(){
         $location.path('/results');

@@ -1,33 +1,11 @@
-<div class="container-fluid">
-  
-  	<div class="jumbotron_red jumbotron-fluid">
-			<div class="container-fluid "> 	
-				<h4>
-				  	<p class="text-center"><kbd>{{taggedPics.length}}</kbd> of them contain <button type="button" class="btn btn-outline-danger">Weed</button></p>
-				</h4>
-			</div>
-	</div>
-  <div class="table-responsive">
-  	<table class="table-responsive">
-  	
-    <tbody>
-    	<tr>{{2+3}}</tr>
-      	<tr ng-repeat="pics in taggedPics">
-        	<td>
-        		<div class="padding_plz">
-        			<img src="http://cdn2-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-8.jpg" class="img-responsive" alt="Responsive image">
-        		</div>
-			</td>		
-			<td>
-				<div class="padding_plz">
-					<div class="padding_top">
-						<p class="text-center"><button type="button" class="btn btn-danger btn-lg">Delete</button></p>
-					</div>
-				</div>
-			</td>
-		</tr> 
-    </tbody>
-  </table>
-  </div>
-  <button ng-click="gotoSearch()">Go back!</button>
-</div>
+<table border="1px">
+            <tr>
+            	<th>Image</th>
+    			<th>Tags</th>
+
+            </tr>
+            <tr ng-repeat="links in taggedPics">
+                    <td>{{$index}}</td>
+                    <td>{{link}}</td>
+            </tr>
+</table>
