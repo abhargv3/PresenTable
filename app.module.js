@@ -22,7 +22,7 @@ app.controller("loginCtrl",function($scope,$location){
     $scope.images = [];
     $scope.imageObj = [];
     $scope.ids = [];
-    $scope.tag = [{name:'alcohol'}, {name:'party'}, {name:'profanity'}, {name:'smoking'}, {name:'people'}];
+    $scope.tag = [{name:'indoors'}, {name:'man'}, {name:'woman'}, {name:'wear'}, {name:'people'}];
     $scope.taggedPics = [[],[]];
     var userId;
     var accessCode;
@@ -54,6 +54,17 @@ app.controller("loginCtrl",function($scope,$location){
                         $scope.ids.push(userId+i);
                     };
                     console.log($scope.imageObj);
+
+                    clarifaiApp.inputs.delete().then(
+                      function(response) {
+                        // do something with response
+                        console.log("Deleting stuff...");
+                      },
+                      function(err) {
+                        // there was an error
+                      }
+                    );
+
                     clarifaiApp.inputs.create($scope.imageObj)
                     .then(
                         $scope.searchByTag(),
