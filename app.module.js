@@ -21,7 +21,7 @@ app.controller("loginCtrl",function($scope,$location){
     $scope.images = [];
     $scope.imageObj = [];
     $scope.ids = [];
-    $scope.tag = [{type:'input', name:'Alcohol'}, {type:'input', name:'party'}, {type:'input', name:'profanity'}, {type:'input', name:'smoking'}, {type:'input', name:'people'}];
+    $scope.tag = [{type:'input', name:'Alcohol'}, {type:'input', name:'party'}, {type:'input', name:'profanity'}, {type:'input', name:'smoking'}, {name:'people'}];
     var userId;
     var accessCode;
     var user_photos;
